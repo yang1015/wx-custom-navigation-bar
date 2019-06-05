@@ -1,0 +1,6 @@
+<view>
+    <custom-navigation-bar navTitle = "导航栏标题" />
+    <view>
+        内容区域
+    </view>
+</view>
