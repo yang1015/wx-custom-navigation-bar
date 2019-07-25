@@ -8,6 +8,8 @@ App({
         let reg = /ios/i;
         this.globalData.navBarHeight = reg.test(res.system) ? 44 : 48;
         this.globalData.systemInfo = wx.getSystemInfoSync();
+
+        console.log(wx.getMenuButtonBoundingClientRect())
     },
     globalData: {
         userInfo: null

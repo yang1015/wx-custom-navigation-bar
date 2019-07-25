@@ -3,21 +3,29 @@ let globalData = getApp().globalData;
 Component({
     properties: {
         statusBarHeight: {
-            type: Number,
-            value: globalData.statusBarHeight, // 状态栏高度(信号时间电量)
+            type: Number
         },
         navBarHeight: {
-            type: Number,
-            value: globalData.navBarHeight
+            type: Number
         },
         navTitle: {
             type: String
         }
     },
 
+    lifetimes: {
+        attached() {
+            const res = wx.getSystemInfoSync();
+            let reg = /ios/i;
+            this.setData({
+                statusBarHeight: res.statusBarHeight,
+                navBarHeight: reg.test(res.system) ? 44 : 48,
+            })
+        }
+    },
+
     methods: {
         goBack(e) {
-            console.log("返回")
             wx.navigateBack();
         }
     }

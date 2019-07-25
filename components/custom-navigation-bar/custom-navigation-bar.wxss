@@ -1,7 +1,25 @@
 .nav-wrapper {
-    width: 100%;
-    box-sizing: border-box;
     position: fixed;
+    width:100vw;
+    display: flex;
+    align-items: center;
+    background: -webkit-linear-gradient(left, #F5C358 , #F3A750, #EB793C); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #F5C358 , #F3A750, #EB793C); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #F5C358 , #F3A750, #EB793C); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #F5C358 , #F3A750, #EB793C); /* 标准的语法 */
+}
+
+.nav-wrapper::after {
+    display: block;
+    content: " ";
+    height:0;
+    clear:both;
+}
+
+.nav-content {
+    position: absolute;
+    position: fixed;
+    width:100vw;
     display: flex;
     align-items: center;
 }
@@ -10,10 +28,11 @@
     width: 40rpx;
     height: 40rpx;
     padding: 0 33rpx;
-    z-index: 100;
+    z-index: 11;
 }
 
 .nav-title {
+    /*和整个wrapper一样都是针对于html/视窗的*/
     position: absolute;
     top: 0;
     bottom: 0;
@@ -21,9 +40,6 @@
     right: 0;
     text-align: center;
     box-sizing: border-box;
-    z-index:10;
+    z-index: 10;
 }
 
-.text-size-nav {
-    font-size: 34rpx;
-}

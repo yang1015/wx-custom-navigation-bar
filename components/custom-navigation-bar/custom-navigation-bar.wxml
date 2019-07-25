@@ -1,8 +1,12 @@
-<view>
-    <view class = "nav-wrapper text-size-nav" style = "height: {{navBarHeight}}px; top: {{statusBarHeight}}px">
-        <image class = "previous-icon" src = "/assets/arrowLeft.png" bindtap = "goBack"/>
-        <view class = "nav-title" style="line-height: {{navBarHeight}}px">{{navTitle}}</view>
-    </view>
 
+
+<block>
+    <view class="nav-wrapper" style="height: {{statusBarHeight+ navBarHeight}}px; font-size: 34rpx;">
+        <view class= "nav-content" style="top: {{statusBarHeight}}px; height: {{navBarHeight}}px; line-height: {{navBarHeight}}px" >
+            <image class="previous-icon" src="/assets/arrowLeft.png" bindtap="goBack"/>
+            <view class="nav-title" style="">{{navTitle}}</view>
+        </view>
+    </view>
     <view class = "clearfix" style = "height: {{navBarHeight+statusBarHeight}}px"/>
-</view>
+</block>
+

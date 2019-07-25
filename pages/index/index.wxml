@@ -1,6 +1,7 @@
 <view>
     <custom-navigation-bar navTitle = "导航栏标题" />
-    <view>
+    <view style = "text-align: center; position: absolute">
         内容区域
     </view>
+    <!--<button bindtap = "toggle">切换导航栏样式</button>-->
 </view>
